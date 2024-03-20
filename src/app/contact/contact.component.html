@@ -1,0 +1,27 @@
+<form [formGroup]="myReactiveForm">
+    <div class="text-xl">Contact us</div>
+    <mat-form-field>
+        <mat-label>User Name</mat-label>
+        <input matInput placeholder="User Name" formControlName="username">
+    </mat-form-field>
+    <hr>
+    <mat-form-field >
+        <mat-label>Email</mat-label>
+        <input matInput placeholder="User Email" formControlName="email">
+    </mat-form-field>
+    <hr>
+
+    <div class="mt-2" formArrayName="skills">
+        <ng-container *ngFor="let skill of myReactiveForm.get('skills').controls; index as i">
+            <mat-form-field >
+                <mat-label>Skill</mat-label>
+                <input matInput placeholder="Your Skill" [formControlName]="i">
+            </mat-form-field>
+            <mat-icon (click)="removeSkill(i)">close</mat-icon>
+        </ng-container>
+        
+    </div>
+    <mat-icon (click)="addSkill()">add_circle</mat-icon>
+    <hr>
+    <button mat-raised-button (click)="onSubmit()">Submit</button>
+</form>

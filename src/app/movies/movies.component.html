@@ -1,0 +1,10 @@
+<p class="text-xl">All trending movies</p>
+
+<div fxLayout="row wrap">
+    <div *ngFor="let movie of myMovies" class="w-96 border-2 m-4 p-4">
+        <p>Name: <strong>{{movie?.title}}</strong></p>
+        <img [src]="getImageUrl(movie.poster_path)" alt="">
+        <div>{{movie.overview}}</div>
+        <img [src]="getImageUrl(movie.backdrop_path)" alt="">
+    </div>
+</div>
