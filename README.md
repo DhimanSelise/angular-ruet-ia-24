@@ -56,7 +56,7 @@ Provide step-by-step instructions on how to install and set up your project. Inc
    ng serve
 ## Live Demo
 
-See the live demo of the project :   [https://uits-ia-23.netlify.app](https://ruet-ia-24.netlify.app/)
+See the live demo of the project :   [https://ruet-ia-24.netlify.app](https://ruet-ia-24.netlify.app/)
 
 ## Contact
 
